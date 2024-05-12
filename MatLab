@@ -1,0 +1,10 @@
+clc;clear
+D=(3.5*2.56)/100; %%in to cm to m
+
+torque=1500*1.3558; %% lb-ft to Nm
+
+torsionStressSolid=(torque*(D/2))/((pi/32)*D^4); %%Solid Shaft
+
+dHollow2=D*0.50; %50percent hollow shaft
+torsionStressHollow=(torque*(D/2))/((pi/32)*(D^4-dHollow2^4)); %%Pa
+
